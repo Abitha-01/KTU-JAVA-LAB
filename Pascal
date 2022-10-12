@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Pascal{
+public static void main(String[] args){
+
+	int r,c=1,i,j,spc;	
+	System.out.print("enter the no of rows:");
+	Scanner n=new Scanner(System.in);		
+	r= n.nextInt();
+	for(i=0;i<r;i++)
+	{
+		for(spc=1;spc<=r-i;spc++)
+		System.out.print("  ");
+		for(j=0;j<=i;j++)
+		{
+			if(j==0 || i==0)
+				c=1;
+			else
+				c=c*(i-j+1)/j;
+			System.out.print("   "+c);
+		}
+		System.out.print("\n");
+		}
+	}
+}
