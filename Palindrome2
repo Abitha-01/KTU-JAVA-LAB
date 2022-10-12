@@ -1,0 +1,22 @@
+public class Palindrome2{
+	public static void main(String[] args){
+	System.out.println("ENTER THE STRING: ");
+	String str = args[0];
+	int flag=0, i, len=str.length();
+	for(i=0;i<len/2;i++)
+	{
+		if(str.charAt(i) != str.charAt(len-i-1))
+		{
+			flag=1;
+		}
+	}
+	if(flag==0)
+	{
+		System.out.println("STRING IS PALINDROME \n");
+	}
+	else
+	{
+		System.out.println("STRING IS NOT PALINDROME \n");
+	}
+ }
+}
