@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class Matrixadd{
+	public static void main(String[] args){ 
+		int Ra,Rb,Ca,Cb,i,j; 
+		Scanner temp=new Scanner(System.in);
+		System.out.print("ENTER THE NO OF ROWS OF MATRIX A: ");
+		Ra= temp.nextInt();
+		System.out.print("ENTER THE NO OF ROWS OF MATRIX B: ");
+		Rb= temp.nextInt();
+		System.out.print("ENTER THE NO OF COLUMNS OF MATRIX A: ");
+		Ca= temp.nextInt();
+		System.out.print("ENTER THE NO OF COLUMNS OF MATRIX B: ");
+		Cb= temp.nextInt();
+		if(Ra == Rb && Ca == Cb)
+		{
+			int a[][]=new int[Ra][Ca];
+		 	int b[][]=new int[Rb][Cb];
+		 	int c[][]=new int[Rb][Cb];
+			System.out.println("ENTER THE ELEMENTS OF MATRIX A");
+			for(i=0;i<Ra;i++){
+				for(j=0;j<Ca;j++){
+					a[i][j]=temp.nextInt();
+					}
+				}
+				System.out.println("MATRIX A IS :");
+			for(i=0;i<Ra;i++){
+				for(j=0;j<Ca;j++){
+				
+				System.out.print(a[i][j]+" ");
+				}
+				System.out.println("");
+				}
+			System.out.println("ENTER THE ELEMENTS OF MATRIX B");
+			for(i=0;i<Rb;i++){
+				for(j=0;j<Cb;j++){
+					b[i][j]=temp.nextInt();
+					}
+				}
+				System.out.println("\nMATRIX B IS :");
+			for(i=0;i<Rb;i++){
+				for(j=0;j<Cb;j++){
+				System.out.print(b[i][j]+" ");
+				}
+				System.out.println("");
+				}
+			for(i=0;i<Rb;i++){
+				for(j=0;j<Cb;j++){
+					c[i][j]= a[i][j] + b[i][j];
+			}
+			}
+			System.out.println("SUM OF MATRIX IS");
+			for(i=0;i<Rb;i++){
+				for(j=0;j<Cb;j++){
+				
+				System.out.print(c[i][j]+" ");
+				}
+				System.out.println("");
+				}
+		}
+		else
+		{
+			System.out.println("!!!MATRIX ADDITION NOT POSSIBLE!!!");
+		}
+	}
+}
