@@ -27,7 +27,7 @@ class Multhread {
  Thread objZ = new Thread(new Z());
  try {
  Thread.sleep(1000);
- } catch (Exception e) {
+ } catch (InterruptedException e) {
  }
 objX.start();
  objY.start();
